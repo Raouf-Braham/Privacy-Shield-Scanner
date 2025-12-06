@@ -6,10 +6,10 @@
 
 **A powerful browser extension that analyzes website privacy and security in real-time.**
 
-[![License: MIT](https://img.shields. io/badge/License-MIT-blue.svg)](LICENSE)
-[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-green. svg)](https://chrome.google. com/webstore)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-green.svg)](https://chrome.google.com/webstore)
 [![Version](https://img.shields.io/badge/Version-1.0.0-orange.svg)](https://github.com/Raouf-Braham/Privacy-Shield-Scanner/releases)
-[![JavaScript](https://img.shields.io/badge/Made%20with-JavaScript-yellow. svg)](https://developer.mozilla. org/en-US/docs/Web/JavaScript)
+[![JavaScript](https://img.shields.io/badge/Made%20with-JavaScript-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 [Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Permissions](#-permissions-explained) • [Contributing](#-contributing)
 
