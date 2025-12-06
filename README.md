@@ -4,101 +4,100 @@
 
 ![Privacy Shield Scanner Logo](assets/icons/icon128.png)
 
-**Une extension de navigateur puissante qui analyse la confidentialité et la sécurité des sites web en temps réel.**
+**A powerful browser extension that analyzes website privacy and security in real-time.**
 
-[![Licence: MIT](https://img.shields.io/badge/Licence-MIT-blue.svg)](LICENSE)
-[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-green.svg)](https://chrome.google.com/webstore)
+[![License: MIT](https://img.shields. io/badge/License-MIT-blue.svg)](LICENSE)
+[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-green. svg)](https://chrome.google. com/webstore)
 [![Version](https://img.shields.io/badge/Version-1.0.0-orange.svg)](https://github.com/Raouf-Braham/Privacy-Shield-Scanner/releases)
-[![JavaScript](https://img.shields.io/badge/Made%20with-JavaScript-yellow.svg)](https://developer.mozilla.org/fr/docs/Web/JavaScript)
+[![JavaScript](https://img.shields.io/badge/Made%20with-JavaScript-yellow. svg)](https://developer.mozilla. org/en-US/docs/Web/JavaScript)
 
-[Fonctionnalités](#-fonctionnalités) • [Installation](#-installation) • [Utilisation](#-utilisation) • [Permissions](#-permissions-expliquées) • [Contribution](#-contribution)
+[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Permissions](#-permissions-explained) • [Contributing](#-contributing)
 
 </div>
 
 ---
 
-## 📋 Table des Matières
+## 📋 Table of Contents
 
-- [Aperçu](#-aperçu)
-- [Fonctionnalités](#-fonctionnalités)
-- [Simulation](#-Simulation)
+- [Overview](#-overview)
+- [Features](#-features)
+- [Demo](#-demo)
 - [Installation](#-installation)
-- [Utilisation](#-utilisation)
-- [Comment ça marche](#-comment-ça-marche)
-- [Permissions expliquées](#-permissions-expliquées)
-- [Structure du projet](#-structure-du-projet)
-- [Développement](#-développement)
-- [Contribution](#-contribution)
-- [Licence](#-licence)
+- [Usage](#-usage)
+- [How It Works](#-how-it-works)
+- [Permissions Explained](#-permissions-explained)
+- [Project Structure](#-project-structure)
+- [Development](#-development)
+- [Contributing](#-contributing)
+- [License](#-license)
 - [Contact](#-contact)
 
 ---
 
-## 🌟 Aperçu
+## 🌟 Overview
 
-**Privacy Shield Scanner** est une extension de navigateur Chrome/Edge qui vous aide à comprendre comment les sites web suivent votre activité en ligne.  Elle analyse les pages web en temps réel pour détecter :
+**Privacy Shield Scanner** is a Chrome/Edge browser extension that helps you understand how websites track your online activity.  It analyzes web pages in real-time to detect:
 
-- 👁️ **Scripts de tracking** (Google Analytics, Facebook Pixel, etc.)
-- 🔍 **Techniques de fingerprinting** du navigateur
-- 🌐 **Domaines tiers** qui chargent des ressources
-- 🍪 **Cookies** et leurs utilisations
-- 🔒 **Problèmes de sécurité** (HTTPS, contenu mixte)
+- 👁️ **Tracking scripts** (Google Analytics, Facebook Pixel, etc.)
+- 🔍 **Browser fingerprinting** techniques
+- 🌐 **Third-party domains** loading resources
+- 🍪 **Cookies** and their purposes
+- 🔒 **Security issues** (HTTPS, mixed content)
 
-Obtenez instantanément un **score de confidentialité** de 0 à 100 et des recommandations concrètes pour protéger votre vie privée en ligne.
-
----
-
-## ✨ Fonctionnalités
-
-### 🎯 Fonctionnalités Principales
-
-| Fonctionnalité | Description |
-|----------------|-------------|
-| **Analyse en temps réel** | Analyse automatiquement les pages pendant votre navigation |
-| **Score de confidentialité** | Score de 0-100 avec note (A+ à F) |
-| **Détection des trackers** | Identifie plus de 50 services de tracking courants |
-| **Détection du fingerprinting** | Détecte le fingerprinting canvas, WebGL, audio |
-| **Analyse de sécurité** | Vérifie HTTPS et le contenu mixte |
-| **Rapports détaillés** | Exportez les résultats vers le presse-papiers |
-
-### 🎨 Expérience Utilisateur
-
-- 🌓 **Thème Sombre/Clair** - S'adapte aux préférences système
-- ⚡ **Rapide et Léger** - Impact minimal sur les performances
-- 📱 **Interface moderne** - Design épuré et intuitif
-- 🔔 **Notifications badge** - Score affiché sur l'icône de l'extension
-- 📊 **Détails en accordéon** - Listes extensibles pour plus d'informations
+Instantly receive a **privacy score** from 0 to 100 along with actionable recommendations to protect your online privacy.
 
 ---
 
-## 📸 Simulation
+## ✨ Features
+
+### 🎯 Core Features
+
+| Feature | Description |
+|---------|-------------|
+| **Real-time Analysis** | Automatically analyzes pages as you browse |
+| **Privacy Score** | Score from 0-100 with letter grade (A+ to F) |
+| **Tracker Detection** | Identifies 200+ common tracking services |
+| **Fingerprinting Detection** | Detects canvas, WebGL, and audio fingerprinting |
+| **Security Analysis** | Verifies HTTPS and mixed content |
+| **Detailed Reports** | Export results to clipboard |
+
+### 🎨 User Experience
+
+- 🌓 **Dark/Light Theme** - Adapts to system preferences
+- ⚡ **Fast & Lightweight** - Minimal performance impact
+- 📱 **Modern Interface** - Clean and intuitive design
+- 🔔 **Badge Notifications** - Score displayed on extension icon
+- 📊 **Accordion Details** - Expandable lists for more information
+- 📈 **Score History** - Track privacy changes over time
+
+---
+
+## 📸 Demo
 
 <video src="https://github.com/user-attachments/assets/7303f62c-d85c-4972-a4b3-7d73ae2bf926" controls></video>
 
+### Score Examples
 
+| Score | Grade | Color | Meaning |
+|-------|-------|-------|---------|
+| 90-100 | A+ | 🟢 Green | Excellent privacy |
+| 80-89 | A | 🟢 Green | Very good |
+| 70-79 | B | 🟡 Yellow-Green | Good |
+| 60-69 | C | 🟡 Yellow | Moderate |
+| 50-59 | D | 🟠 Orange | Poor |
+| 30-49 | E | 🔴 Red | Bad |
+| 0-29 | F | 🔴 Dark Red | Critical |
 
-### Exemples de Scores
-
-| Score | Note | Couleur | Signification |
-|-------|------|---------|---------------|
-| 90-100 | A+ | 🟢 Vert | Excellente confidentialité |
-| 80-89 | A | 🟢 Vert | Très bon |
-| 70-79 | B | 🟡 Jaune-Vert | Bon |
-| 60-69 | C | 🟡 Jaune | Modéré |
-| 50-59 | D | 🟠 Orange | Faible |
-| 30-49 | E | 🔴 Rouge | Mauvais |
-| 0-29 | F | 🔴 Rouge foncé | Critique |
-
-### Détail des Trackers
+### Tracker Details
 
 ```
 ┌─────────────────────────────────────┐
-│ 👁️ Trackers Détectés           3   │
+│ 👁️ Trackers Detected            3   │
 ├─────────────────────────────────────┤
 │ ┌─────────────────────────────────┐ │
 │ │ google-analytics.com  ANALYTICS │ │
 │ │ facebook.net          SOCIAL    │ │
-│ │ doubleclick.net       PUB       │ │
+│ │ doubleclick.net       ADS       │ │
 │ └─────────────────────────────────┘ │
 └─────────────────────────────────────┘
 ```
@@ -107,296 +106,309 @@ Obtenez instantanément un **score de confidentialité** de 0 à 100 et des reco
 
 ## 🚀 Installation
 
-### Méthode 1 : Chargement Manuel (Mode Développeur)
+### Method 1: Manual Loading (Developer Mode)
 
-#### Étape 1 : Télécharger le code source
+#### Step 1: Download the Source Code
 
 ```bash
 git clone https://github.com/Raouf-Braham/Privacy-Shield-Scanner.git
 ```
 
-Ou téléchargez et extrayez le fichier ZIP depuis GitHub.
+Or download and extract the ZIP file from GitHub.
 
-#### Étape 2 : Ouvrir les Extensions Chrome
+#### Step 2: Open Chrome Extensions
 
-- Ouvrez Chrome/Edge
-- Tapez `chrome://extensions/` dans la barre d'adresse
-- Ou allez dans Menu → Plus d'outils → Extensions
+- Open Chrome/Edge
+- Type `chrome://extensions/` in the address bar
+- Or navigate to Menu → More Tools → Extensions
 
-#### Étape 3 : Activer le Mode Développeur
+#### Step 3: Enable Developer Mode
 
-- Activez le bouton "Mode développeur" en haut à droite de la page
+- Toggle the "Developer mode" switch in the top right corner of the page
 
-#### Étape 4 : Charger l'extension
+#### Step 4: Load the Extension
 
-- Cliquez sur "Charger l'extension non empaquetée"
-- Sélectionnez le dossier `Privacy-Shield-Scanner`
-- L'icône 🛡️ devrait apparaître dans votre barre d'outils
+- Click "Load unpacked"
+- Select the `Privacy-Shield-Scanner` folder
+- The 🛡️ icon should appear in your toolbar
 
-#### Étape 5 : Épingler l'extension (recommandé)
+#### Step 5: Pin the Extension (Recommended)
 
-- Cliquez sur l'icône puzzle 🧩 dans la barre d'outils
-- Cliquez sur l'épingle 📌 à côté de "Privacy Shield Scanner"
+- Click the puzzle icon 🧩 in the toolbar
+- Click the pin 📌 next to "Privacy Shield Scanner"
 
-### Méthode 2 : Chrome Web Store (Bientôt disponible)
+### Method 2: Chrome Web Store (Coming Soon)
 
 ```
-🚧 L'extension sera bientôt disponible sur le Chrome Web Store ! 
+🚧 The extension will be available on the Chrome Web Store soon! 
 ```
 
 ---
 
-## 📖 Utilisation
+## 📖 Usage
 
-### Utilisation de Base
+### Basic Usage
 
-1. **Naviguez** vers n'importe quel site web
-2. **Attendez** 1-2 secondes que l'analyse se termine
-3. **Cliquez** sur l'icône 🛡️ dans la barre d'outils
-4. **Consultez** votre score de confidentialité et les détails
+1.**Navigate** to any website
+2. **Wait** 1-2 seconds for the analysis to complete
+3. **Click** the 🛡️ icon in the toolbar
+4. **Review** your privacy score and details
 
-### Comprendre les Résultats
+### Understanding the Results
 
-#### Score de Confidentialité
-- **90-100 (A+)** : Excellent !  Le site respecte votre vie privée
-- **70-89 (A/B)** : Bon, quelques trackers présents
-- **50-69 (C/D)** : Modéré, plusieurs trackers détectés
-- **0-49 (E/F)** : Mauvais, nombreux trackers et risques
+#### Privacy Score
+- **90-100 (A+)**: Excellent!  The site respects your privacy
+- **70-89 (A/B)**: Good, some trackers present
+- **50-69 (C/D)**: Moderate, several trackers detected
+- **0-49 (E/F)**: Poor, numerous trackers and risks
 
-#### Sections Détaillées
+#### Detailed Sections
 
 | Section | Description |
 |---------|-------------|
-| **Trackers** | Liste des scripts de suivi détectés |
-| **Fingerprinting** | Techniques d'identification du navigateur |
-| **Domaines Tiers** | Ressources chargées depuis d'autres sites |
-| **Sécurité** | État HTTPS et contenu mixte |
+| **Trackers** | List of detected tracking scripts |
+| **Fingerprinting** | Browser identification techniques |
+| **Third-Party Domains** | Resources loaded from external sites |
+| **Security** | HTTPS status and mixed content |
 
-### Actions Disponibles
+### Available Actions
 
-- **🔄 Rescanner** : Relance une analyse de la page
-- **📋 Copier Rapport** : Copie un rapport détaillé dans le presse-papiers
+- **🔄 Rescan**: Re-run the page analysis
+- **📋 Copy Report**: Copy a detailed report to clipboard
+- **🔗 Share**: Share your results
 
 ---
 
-## ⚙️ Comment ça marche
+## ⚙️ How It Works
 
-### Processus d'Analyse
+### Analysis Process
 
 ```
 ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│   Page      │     │   Script    │     │   Service   │
-│   Chargée   │ ──▶ │   Analyse   │ ──▶ │   Worker    │
-│             │     │   le DOM    │     │   Stocke    │
+│    Page     │     │   Script    │     │   Service   │
+│   Loaded    │ ──▶ │  Analyzes   │ ──▶ │   Worker    │
+│             │     │   the DOM   │     │   Stores    │
 └─────────────┘     └─────────────┘     └─────────────┘
                            │                   │
                            ▼                   ▼
                     ┌─────────────┐     ┌─────────────┐
-                    │  Détecte:   │     │   Badge     │
-                    │  - Trackers │     │   Affiche   │
-                    │  - Scripts  │     │   le Score  │
-                    │  - Domaines │     │             │
+                    │  Detects:   │     │   Badge     │
+                    │  - Trackers │     │  Displays   │
+                    │  - Scripts  │     │   Score     │
+                    │  - Domains  │     │             │
                     └─────────────┘     └─────────────┘
 ```
 
-### Méthodes de Détection
+### Detection Methods
 
-#### 1. Détection des Trackers
+#### 1.  Tracker Detection
 
-L'extension recherche des patterns connus dans :
-- Sources des scripts (`<script src="...">`)
-- Pixels de tracking (`<img src="... ">`)
+The extension searches for known patterns in:
+- Script sources (`<script src="...">`)
+- Tracking pixels (`<img src="...">`)
 - Iframes (`<iframe src="...">`)
-- Contenu de la page
+- Inline script content
+- Noscript fallback content
 
-**Trackers détectés (liste non exhaustive) :**
+**Detected Trackers (non-exhaustive list):**
 
-| Catégorie | Exemples |
-|-----------|----------|
-| **Analytics** | Google Analytics, Mixpanel, Amplitude, Hotjar |
-| **Publicité** | DoubleClick, Criteo, AdRoll, Taboola |
-| **Réseaux sociaux** | Facebook Pixel, Twitter, LinkedIn, TikTok |
-| **Autres** | Segment, FullStory, NewRelic, Optimizely |
+| Category | Examples |
+|----------|----------|
+| **Analytics** | Google Analytics, Mixpanel, Amplitude, Hotjar, FullStory, Clarity |
+| **Advertising** | DoubleClick, Criteo, AdRoll, Taboola, Outbrain, AppNexus |
+| **Social Media** | Facebook Pixel, Twitter, LinkedIn, TikTok, Pinterest |
+| **Marketing** | HubSpot, Marketo, Pardot, Mailchimp, Klaviyo |
+| **Other** | Segment, NewRelic, Optimizely, Intercom, Drift |
 
-#### 2.  Détection du Fingerprinting
+#### 2. Fingerprinting Detection
 
-Analyse les scripts inline pour détecter :
+Analyzes scripts to detect fingerprinting techniques:
 
-| Technique | Description |
-|-----------|-------------|
-| `canvas. toDataURL()` | Fingerprinting Canvas |
-| `WebGLRenderingContext` | Fingerprinting WebGL |
-| `AudioContext` | Fingerprinting Audio |
-| `navigator.plugins` | Énumération des plugins |
-| `RTCPeerConnection` | Fuites WebRTC |
-| `getBattery` | État de la batterie |
+| Technique | Description | Severity |
+|-----------|-------------|----------|
+| `canvas. toDataURL()` | Canvas Fingerprinting | High |
+| `WebGLRenderingContext` | WebGL Fingerprinting | High |
+| `AudioContext` | Audio Fingerprinting | High |
+| `navigator.plugins` | Plugin Enumeration | Medium |
+| `RTCPeerConnection` | WebRTC IP Leaks | High |
+| `getBattery` | Battery Status API | Medium |
+| `enumerateDevices` | Media Device Enumeration | High |
 
-#### 3. Analyse de Sécurité
+#### 3. Security Analysis
 
-- **HTTPS** : Vérifie si la connexion est sécurisée
-- **Contenu Mixte** : Détecte les ressources HTTP sur pages HTTPS
+- **HTTPS**: Verifies secure connection
+- **Mixed Content**: Detects HTTP resources on HTTPS pages
+- **CSP**: Checks for Content Security Policy
 
-#### 4. Analyse des Tiers
+#### 4. Third-Party Analysis
 
-- Compte les domaines externes
-- Liste toutes les ressources tierces
+- Counts external domains with category classification
+- Differentiates between CDNs, analytics, advertising, and social widgets
+- Lists all third-party resources
 
-### Calcul du Score
+### Score Calculation
 
 ```javascript
 Score = 100
-  - (trackers × 3)              // Maximum -25 points
-  - (fingerprinting × 5)        // Maximum -25 points
-  - (pas de HTTPS ?  15 : 0)     // -15 si non sécurisé
-  - (contenu mixte ? 10 : 0)    // -10 si détecté
-  - (domaines tiers × 0.5)      // Maximum -15 points
-  - (cookies × 1)               // Maximum -10 points
+  - (trackers penalty)           // Maximum -30 points (progressive)
+  - (fingerprinting penalty)     // Maximum -25 points (severity-based)
+  - (no HTTPS ?  15 : 0)          // -15 if insecure
+  - (mixed content ? 5 : 0)      // -5 if detected
+  - (third-party penalty)        // Maximum -15 points (category-weighted)
+  - (cookies penalty)            // Maximum -10 points
 ```
 
-**Exemple :**
+**Example:**
 ```
-Site avec :
-- 5 trackers     → -15 points
-- 2 fingerprint  → -10 points
-- HTTPS          → 0 points
-- 20 domaines    → -10 points
-- 8 cookies      → -8 points
+Site with:
+- 5 trackers        → -15 points
+- 2 fingerprinting  → -12 points (high severity)
+- HTTPS             → 0 points
+- 20 third-party    → -8 points
+- 8 cookies         → -4 points
 
-Score final : 100 - 15 - 10 - 0 - 10 - 8 = 57/100 (Note D)
+Final Score: 100 - 15 - 12 - 0 - 8 - 4 = 61/100 (Grade C)
 ```
 
 ---
 
-## 🔐 Permissions Expliquées
+## 🔐 Permissions Explained
 
-L'extension demande les permissions suivantes :
+The extension requests the following permissions:
 
-| Permission | Pourquoi c'est nécessaire |
-|------------|---------------------------|
-| `activeTab` | Accéder à l'onglet actif pour analyser son contenu |
-| `storage` | Sauvegarder vos préférences et l'historique des analyses |
-| `scripting` | Injecter le script d'analyse dans les pages |
-| `<all_urls>` | Analyser n'importe quel site web que vous visitez |
+| Permission | Why It's Needed |
+|------------|-----------------|
+| `activeTab` | Access the active tab to analyze its content |
+| `storage` | Save your preferences and scan history |
+| `scripting` | Inject the analysis script into pages |
+| `<all_urls>` | Analyze any website you visit |
 
-### Engagement de Confidentialité
+### Privacy Commitment
 
-✅ **Ce que nous NE faisons PAS :**
-- Collecter ou transmettre vos données de navigation
-- Stocker des informations sur des serveurs externes
-- Partager des données avec des tiers
-- Suivre votre historique de navigation
+✅ **What We DO NOT Do:**
+- Collect or transmit your browsing data
+- Store information on external servers
+- Share data with third parties
+- Track your browsing history
 
-✅ **Toute l'analyse se fait localement dans votre navigateur.**
+✅ **All analysis is performed locally in your browser.**
 
 ---
 
-## 📁 Structure du Projet
+## 📁 Project Structure
 
 ```
 Privacy-Shield-Scanner/
 │
-├── 📄 manifest.json          # Configuration de l'extension
-├── 📄 README.md              # Ce fichier
-├── 📄 LICENSE                # Licence MIT
-├── 📄 PRIVACY. md             # Politique de confidentialité
-├── 📄 CONTRIBUTING.md        # Guide de contribution
+├── 📄 manifest.json          # Extension configuration
+├── 📄 README.md              # This file
+├── 📄 LICENSE                # MIT License
+├── 📄 PRIVACY.md             # Privacy Policy
+├── 📄 CONTRIBUTING.md        # Contribution Guide
 │
 ├── 📁 assets/
 │   └── 📁 icons/
-│       ├── icon16.png        # Icône barre d'outils
-│       ├── icon32.png        # Petite icône
-│       ├── icon48.png        # Icône moyenne
-│       └── icon128.png       # Grande icône
+│       ├── icon16.png        # Toolbar icon
+│       ├── icon32.png        # Small icon
+│       ├── icon48.png        # Medium icon
+│       └── icon128.png       # Large icon
 │
 ├── 📁 src/
 │   ├── 📁 background/
-│   │   └── service-worker.js # Service worker en arrière-plan
+│   │   └── service-worker.js # Background service worker
 │   │
 │   ├── 📁 content/
-│   │   └── content-script.js # Script d'analyse des pages
+│   │   └── content-script.js # Page analysis script
 │   │
 │   ├── 📁 popup/
-│   │   ├── popup.html        # Structure de l'interface
-│   │   ├── popup.css         # Styles de l'interface
-│   │   └── popup.js          # Logique de l'interface
+│   │   ├── popup.html        # Interface structure
+│   │   ├── popup.css         # Interface styles
+│   │   └── popup.js          # Interface logic
 │   │
-│   └── 📁 options/
-│       ├── options.html      # Page des paramètres
-│       ├── options.css       # Styles des paramètres
-│       └── options.js        # Logique des paramètres
+│   ├── 📁 options/
+│   │   ├── options.html      # Settings page
+│   │   ├── options.css       # Settings styles
+│   │   └── options.js        # Settings logic
+│   │
+│   └── 📁 utils/
+│       ├── analyzer.js       # Analysis utilities
+│       └── trackers-database.js # Tracker patterns
 │
 └── 📁 docs/
-    └── screenshots/          # Images de documentation
+    └── screenshots/          # Documentation images
 ```
 
 ---
 
-## 🛠️ Développement
+## 🛠️ Development
 
-### Prérequis
+### Prerequisites
 
-- Navigateur Google Chrome ou Microsoft Edge
-- Connaissances de base en JavaScript, HTML, CSS
-- Éditeur de texte (VS Code recommandé)
+- Google Chrome or Microsoft Edge browser
+- Basic knowledge of JavaScript, HTML, CSS
+- Text editor (VS Code recommended)
 
-### Installation pour le Développement
+### Development Setup
 
-1. **Cloner le dépôt**
+1. **Clone the Repository**
    ```bash
    git clone https://github.com/Raouf-Braham/Privacy-Shield-Scanner.git
    cd Privacy-Shield-Scanner
    ```
 
-2. **Charger dans Chrome**
-   - Aller à `chrome://extensions/`
-   - Activer "Mode développeur"
-   - Cliquer sur "Charger l'extension non empaquetée"
-   - Sélectionner le dossier du projet
+2. **Load in Chrome**
+   - Navigate to `chrome://extensions/`
+   - Enable "Developer mode"
+   - Click "Load unpacked"
+   - Select the project folder
 
-3. **Faire des modifications**
-   - Modifier les fichiers dans le dossier `src/`
-   - Cliquer sur le bouton rafraîchir 🔄 sur la carte de l'extension
-   - Recharger la page de test
+3. **Make Changes**
+   - Modify files in the `src/` folder
+   - Click the refresh button 🔄 on the extension card
+   - Reload the test page
 
-### Débogage
+### Debugging
 
-#### Console du Service Worker
-1. Aller à `chrome://extensions/`
-2. Trouver Privacy Shield Scanner
-3. Cliquer sur le lien "service worker"
-4. Vérifier l'onglet Console pour les logs
+#### Service Worker Console
+1. Go to `chrome://extensions/`
+2. Find Privacy Shield Scanner
+3. Click the "service worker" link
+4. Check the Console tab for logs
 
-#### Console du Popup
-1. Clic droit sur l'icône de l'extension
-2. Sélectionner "Inspecter la fenêtre contextuelle"
-3. Vérifier l'onglet Console
+#### Popup Console
+1. Right-click the extension icon
+2.  Select "Inspect popup"
+3. Check the Console tab
 
-#### Console du Content Script
-1. Ouvrir n'importe quelle page web
-2. Appuyer sur F12 → Onglet Console
-3. Chercher les messages `[Privacy Shield]`
+#### Content Script Console
+1. Open any web page
+2. Press F12 → Console tab
+3. Look for `[Privacy Shield]` messages
 
-### Ajouter de Nouveaux Trackers
+### Adding New Trackers
 
-Modifier `src/content/content-script. js` :
+Edit `src/content/content-script.js`:
 
 ```javascript
-const TRACKER_PATTERNS = [
-  // Ajouter de nouveaux patterns ici
-  'nouveau-tracker. com',
-  'autre-tracker.net/pixel',
+const TRACKER_DATABASE = {
+  analytics: [
+    // Add new patterns here
+    'new-tracker.com',
+    'another-tracker.net/pixel',
+    // ... 
+  ],
   // ... 
-];
+};
 ```
 
-### Structure des Fichiers Principaux
+### Main File Structure
 
 #### manifest.json
 ```json
 {
   "manifest_version": 3,
   "name": "Privacy Shield Scanner",
-  "version": "1.0. 0",
+  "version": "1.0.0",
   "permissions": ["activeTab", "storage", "scripting"],
   "host_permissions": ["<all_urls>"],
   "background": {
@@ -414,55 +426,56 @@ const TRACKER_PATTERNS = [
 
 ---
 
-## 🤝 Contribution
+## 🤝 Contributing
 
-Les contributions sont les bienvenues !  Veuillez lire notre [Guide de Contribution](CONTRIBUTING.md) d'abord.
+Contributions are welcome! Please read our [Contribution Guide](CONTRIBUTING.md) first.
 
-### Comment Contribuer
+### How to Contribute
 
-1. **Forker** le dépôt
-2. **Créer** une branche pour votre fonctionnalité
+1. **Fork** the repository
+2. **Create** a branch for your feature
    ```bash
-   git checkout -b fonctionnalite/ma-super-fonctionnalite
+   git checkout -b feature/my-awesome-feature
    ```
-3. **Commiter** vos changements
+3.  **Commit** your changes
    ```bash
-   git commit -m "Ajout: description de vos changements"
+   git commit -m "Add: description of your changes"
    ```
-4. **Pousser** vers la branche
+4. **Push** to the branch
    ```bash
-   git push origin fonctionnalite/ma-super-fonctionnalite
+   git push origin feature/my-awesome-feature
    ```
-5. **Ouvrir** une Pull Request
+5. **Open** a Pull Request
 
-### Idées de Contributions
+### Contribution Ideas
 
-- [ ] Ajouter plus de patterns de trackers
-- [ ] Améliorer la détection du fingerprinting
-- [ ] Ajouter un scan de l'historique du navigateur
-- [ ] Créer une version Firefox
-- [ ] Ajouter l'export de données (JSON/CSV)
-- [ ] Implémenter une fonctionnalité de blocage
-- [ ] Ajouter l'internationalisation (i18n)
-- [ ] Créer des tests automatisés
+- [ ] Add more tracker patterns
+- [ ] Improve fingerprinting detection
+- [ ] Add browser history scanning
+- [ ] Create a Firefox version
+- [ ] Add data export (JSON/CSV)
+- [ ] Implement blocking functionality
+- [ ] Add internationalization (i18n)
+- [ ] Create automated tests
+- [ ] Add real-time network request monitoring
 
-### Standards de Code
+### Code Standards
 
-- Utiliser 2 espaces pour l'indentation
-- Utiliser des noms de variables explicites
-- Ajouter des commentaires pour la logique complexe
-- Suivre les patterns de code existants
+- Use 2 spaces for indentation
+- Use descriptive variable names
+- Add comments for complex logic
+- Follow existing code patterns
 
 ---
 
-## 📜 Licence
+## 📜 License
 
-Ce projet est sous licence **MIT** - voir le fichier [LICENSE](LICENSE) pour plus de détails. 
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ```
 MIT License
 
-Copyright (c) 2024 Raouf Braham
+Copyright (c) 2025 Raouf Braham
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -481,67 +494,67 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 
 ---
 
-## ❓ FAQ (Foire Aux Questions)
+## ❓ FAQ (Frequently Asked Questions)
 
-### L'extension collecte-t-elle mes données ?
+### Does the extension collect my data?
 
-**Non. ** Toute l'analyse se fait localement dans votre navigateur. Aucune donnée n'est envoyée vers des serveurs externes.
+**No. ** All analysis is performed locally in your browser.  No data is sent to external servers. 
 
-### Pourquoi le score est-il différent à chaque scan ?
+### Why does the score vary between scans?
 
-Le contenu des pages peut changer dynamiquement (publicités, scripts chargés à la demande).  Cela peut affecter légèrement le score.
+Page content can change dynamically (ads, on-demand scripts).  This may slightly affect the score.
 
-### L'extension ralentit-elle ma navigation ?
+### Does the extension slow down my browsing?
 
-**Non.** L'analyse est très rapide et se fait après le chargement de la page.  L'impact sur les performances est négligeable.
+**No.** The analysis is very fast and occurs after the page loads.  Performance impact is negligible.
 
-### Puis-je utiliser l'extension sur Firefox ? 
+### Can I use the extension on Firefox?
 
-Actuellement, l'extension est conçue pour Chrome/Edge. Une version Firefox est prévue dans les futures mises à jour.
+Currently, the extension is designed for Chrome/Edge. A Firefox version is planned for future updates.
 
-### Comment signaler un bug ?
+### How do I report a bug?
 
-Ouvrez une issue sur notre [dépôt GitHub](https://github.com/Raouf-Braham/Privacy-Shield-Scanner/issues) avec :
-- Description du problème
-- Étapes pour reproduire
-- Captures d'écran si possible
+Open an issue on our [GitHub repository](https://github.com/Raouf-Braham/Privacy-Shield-Scanner/issues) with:
+- Problem description
+- Steps to reproduce
+- Screenshots if possible
 
 ---
 
 ## 📞 Contact & Support
 
-- **GitHub Issues** : [Signaler un bug](https://github.com/Raouf-Braham/Privacy-Shield-Scanner/issues)
-- **GitHub Discussions** : [Questions et discussions](https://github.com/Raouf-Braham/Privacy-Shield-Scanner/discussions)
+- **GitHub Issues**: [Report a Bug](https://github.com/Raouf-Braham/Privacy-Shield-Scanner/issues)
+- **GitHub Discussions**: [Questions and Discussions](https://github.com/Raouf-Braham/Privacy-Shield-Scanner/discussions)
 
 ---
 
-## 🙏 Remerciements
+## 🙏 Acknowledgments
 
-- [Documentation Chrome Extension](https://developer.chrome.com/docs/extensions/)
-- [Mozilla WebExtensions](https://developer.mozilla.org/fr/docs/Mozilla/Add-ons/WebExtensions)
-- Icônes par [Emoji](https://emojipedia.org/)
-- Tous les contributeurs du projet
+- [Chrome Extension Documentation](https://developer.chrome.com/docs/extensions/)
+- [Mozilla WebExtensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions)
+- Icons by [Emoji](https://emojipedia.org/)
+- All project contributors
 
 ---
 
-## 📊 Statistiques du Projet
+## 📊 Project Statistics
 
-| Métrique | Valeur |
-|----------|--------|
+| Metric | Value |
+|--------|-------|
 | Version | 1.0.0 |
-| Taille | < 100 KB |
-| Langages | JavaScript, HTML, CSS |
-| Licence | MIT |
-| Compatibilité | Chrome 88+, Edge 88+ |
+| Size | < 100 KB |
+| Languages | JavaScript, HTML, CSS |
+| License | MIT |
+| Compatibility | Chrome 88+, Edge 88+ |
 
 ---
 
 <div align="center">
 
-**Réalisé avec ❤️ pour la Nuit de l'Info 2024**
+**Made with ❤️ for the NEVERHACK Challenge**
 
-⭐ Mettez une étoile à ce dépôt si vous le trouvez utile ! 
+⭐ Star this repository if you find it useful!
 
-[⬆ Retour en haut](#-privacy-shield-scanner)
+[⬆ Back to Top](#-privacy-shield-scanner)
 
 </div>
