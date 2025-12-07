@@ -74,7 +74,7 @@ Instantly receive a **privacy score** from 0 to 100 along with actionable recomm
 
 ## 📸 Demo
 
-<video src="https://github.com/user-attachments/assets/edeb60cf-d6dd-4481-a56a-543f6354c1fe" controls></video>
+<video src="https://github.com/user-attachments/assets/db5bfa57-eb53-443f-b9a1-d94148122c03" controls></video>
 
 ### Score Examples
 
