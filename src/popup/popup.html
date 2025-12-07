@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Shield Scanner</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container" id="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <div class="logo-icon-wrapper">
+          <img src="/assets/icons/logo.png" alt="Privacy Shield Scanner" class="logo-img">
+          <span class="logo-pulse"></span>
+        </div>
+        <span class="logo-text">Privacy Shield</span>
+      </div>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle dark/light theme">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" id="settingsBtn" title="Settings" aria-label="Open settings">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Loading State with Skeleton -->
+    <div class="loading" id="loading">
+      <div class="scan-animation">
+        <div class="scan-shield">🛡️</div>
+        <div class="scan-rings">
+          <div class="scan-ring"></div>
+          <div class="scan-ring"></div>
+          <div class="scan-ring"></div>
+        </div>
+      </div>
+      <div class="scan-progress">
+        <p class="scan-status" id="scanStatus">Initializing scan...</p>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <p class="scan-detail" id="scanDetail">Connecting to page</p>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main" id="mainContent" style="display: none;">
+      <!-- Score Section -->
+      <section class="score-section" id="scoreSection">
+        <div class="score-circle-wrapper">
+          <div class="score-glow" id="scoreGlow"></div>
+          <div class="score-circle" id="scoreCircle">
+            <svg class="score-ring" viewBox="0 0 100 100">
+              <defs>
+                <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" id="gradientStart" stop-color="#22c55e"/>
+                  <stop offset="100%" id="gradientEnd" stop-color="#16a34a"/>
+                </linearGradient>
+              </defs>
+              <circle class="score-ring-bg" cx="50" cy="50" r="42"></circle>
+              <circle class="score-ring-progress" id="scoreRingProgress" cx="50" cy="50" r="42" stroke="url(#scoreGradient)"></circle>
+            </svg>
+            <div class="score-content">
+              <span class="score-grade" id="scoreGrade">--</span>
+              <span class="score-value" id="scoreValue">--</span>
+              <span class="score-label" id="scoreLabel">Scanning</span>
+            </div>
+          </div>
+        </div>
+        <div class="score-info">
+          <h2 class="domain" id="domainName">Loading...</h2>
+          <p class="grade-text" id="gradeText">Calculating privacy score</p>
+          <div class="score-trend" id="scoreTrend" style="display: none;">
+            <span class="trend-icon" id="trendIcon">↑</span>
+            <span class="trend-text" id="trendText">+5 from last visit</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Stats -->
+      <section class="stats-grid" role="list" aria-label="Privacy statistics">
+        <div class="stat-card" data-category="trackers" role="listitem" tabindex="0" aria-label="Trackers found">
+          <div class="stat-icon-wrapper">
+            <span class="stat-icon">👁️</span>
+            <span class="stat-status-dot" id="trackerDot"></span>
+          </div>
+          <div class="stat-info">
+            <span class="stat-value" id="trackerCount">0</span>
+            <span class="stat-label">Trackers</span>
+          </div>
+          <div class="stat-bar" id="trackerBar"></div>
+        </div>
+        <div class="stat-card" data-category="fingerprinting" role="listitem" tabindex="0" aria-label="Fingerprinting attempts">
+          <div class="stat-icon-wrapper">
+            <span class="stat-icon">🔍</span>
+            <span class="stat-status-dot" id="fingerprintDot"></span>
+          </div>
+          <div class="stat-info">
+            <span class="stat-value" id="fingerprintCount">0</span>
+            <span class="stat-label">Fingerprinting</span>
+          </div>
+          <div class="stat-bar" id="fingerprintBar"></div>
+        </div>
+        <div class="stat-card" data-category="thirdparty" role="listitem" tabindex="0" aria-label="Third-party domains">
+          <div class="stat-icon-wrapper">
+            <span class="stat-icon">🌐</span>
+            <span class="stat-status-dot" id="thirdPartyDot"></span>
+          </div>
+          <div class="stat-info">
+            <span class="stat-value" id="thirdPartyCount">0</span>
+            <span class="stat-label">3rd Party</span>
+          </div>
+          <div class="stat-bar" id="thirdPartyBar"></div>
+        </div>
+        <div class="stat-card" data-category="cookies" role="listitem" tabindex="0" aria-label="Cookies found">
+          <div class="stat-icon-wrapper">
+            <span class="stat-icon">🍪</span>
+            <span class="stat-status-dot" id="cookieDot"></span>
+          </div>
+          <div class="stat-info">
+            <span class="stat-value" id="cookieCount">0</span>
+            <span class="stat-label">Cookies</span>
+          </div>
+          <div class="stat-bar" id="cookieBar"></div>
+        </div>
+      </section>
+
+      <!-- Security Status -->
+      <section class="security-section" aria-labelledby="securityTitle">
+        <h3 class="section-title" id="securityTitle">
+          <span class="section-icon">🔐</span>
+          Security Status
+        </h3>
+        <div class="security-grid" id="securityItems">
+          <!-- Populated by JS -->
+        </div>
+      </section>
+
+      <!-- Details Accordion -->
+      <section class="details-section" aria-labelledby="detailsTitle">
+        <h3 class="section-title" id="detailsTitle">
+          <span class="section-icon">📋</span>
+          Detailed Analysis
+        </h3>
+        <div class="accordion" id="accordion" role="tablist">
+          <!-- Trackers -->
+          <div class="accordion-item" id="trackersAccordion">
+            <button class="accordion-header" role="tab" aria-expanded="false" aria-controls="trackerContent">
+              <span class="accordion-title">
+                <span class="accordion-icon">👁️</span>
+                <span class="accordion-text">Trackers Detected</span>
+                <span class="accordion-badge" id="trackerBadge">0</span>
+              </span>
+              <svg class="accordion-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="accordion-content" id="trackerContent" role="tabpanel">
+              <ul class="detail-list" id="trackerList">
+                <li class="empty-state">
+                  <span class="empty-icon">✅</span>
+                  <span>No trackers detected</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Fingerprinting -->
+          <div class="accordion-item" id="fingerprintAccordion">
+            <button class="accordion-header" role="tab" aria-expanded="false" aria-controls="fingerprintContent">
+              <span class="accordion-title">
+                <span class="accordion-icon">🔍</span>
+                <span class="accordion-text">Fingerprinting</span>
+                <span class="accordion-badge" id="fingerprintBadge">0</span>
+              </span>
+              <svg class="accordion-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="accordion-content" id="fingerprintContent" role="tabpanel">
+              <ul class="detail-list" id="fingerprintList">
+                <li class="empty-state">
+                  <span class="empty-icon">✅</span>
+                  <span>No fingerprinting detected</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Third Party Domains -->
+          <div class="accordion-item" id="thirdPartyAccordion">
+            <button class="accordion-header" role="tab" aria-expanded="false" aria-controls="thirdPartyContent">
+              <span class="accordion-title">
+                <span class="accordion-icon">🌐</span>
+                <span class="accordion-text">Third-Party Domains</span>
+                <span class="accordion-badge" id="thirdPartyBadge">0</span>
+              </span>
+              <svg class="accordion-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="accordion-content" id="thirdPartyContent" role="tabpanel">
+              <ul class="detail-list" id="thirdPartyList">
+                <li class="empty-state">
+                  <span class="empty-icon">✅</span>
+                  <span>No third-party domains</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Cookies -->
+          <div class="accordion-item" id="cookiesAccordion">
+            <button class="accordion-header" role="tab" aria-expanded="false" aria-controls="cookiesContent">
+              <span class="accordion-title">
+                <span class="accordion-icon">🍪</span>
+                <span class="accordion-text">Cookies</span>
+                <span class="accordion-badge" id="cookieBadge">0</span>
+              </span>
+              <svg class="accordion-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="accordion-content" id="cookiesContent" role="tabpanel">
+              <ul class="detail-list" id="cookieList">
+                <li class="empty-state">
+                  <span class="empty-icon">✅</span>
+                  <span>No cookies found</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recommendations -->
+      <section class="recommendations-section" id="recommendationsSection" style="display: none;" aria-labelledby="recsTitle">
+        <h3 class="section-title" id="recsTitle">
+          <span class="section-icon">💡</span>
+          Recommendations
+        </h3>
+        <div class="recommendations" id="recommendations">
+          <!-- Populated by JS -->
+        </div>
+      </section>
+
+      <!-- Privacy Tip -->
+      <section class="tip-section" id="tipSection">
+        <div class="tip-card">
+          <span class="tip-icon">💡</span>
+          <p class="tip-text" id="tipText">Use a VPN to further protect your online privacy.</p>
+        </div>
+      </section>
+
+      <!-- Actions -->
+      <section class="actions">
+        <button class="btn btn-primary" id="rescanBtn" aria-label="Rescan current page">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="23 4 23 10 17 10"></polyline>
+            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+          </svg>
+          <span>Rescan</span>
+        </button>
+        <button class="btn btn-secondary" id="reportBtn" aria-label="Copy privacy report">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <span>Copy Report</span>
+        </button>
+        <button class="btn btn-icon" id="shareBtn" aria-label="Share results">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="18" cy="5" r="3"></circle>
+            <circle cx="6" cy="12" r="3"></circle>
+            <circle cx="18" cy="19" r="3"></circle>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+          </svg>
+        </button>
+      </section>
+    </main>
+
+    <!-- Error State -->
+    <div class="error-state" id="errorState" style="display: none;">
+      <div class="error-illustration">
+        <div class="error-shield">🛡️</div>
+        <div class="error-x">✕</div>
+      </div>
+      <h3>Unable to Scan</h3>
+      <p id="errorMessage">This page cannot be scanned.</p>
+      <div class="error-suggestions">
+        <p class="suggestion-title">Try these steps:</p>
+        <ul class="suggestion-list">
+          <li>Refresh the page and try again</li>
+          <li>Make sure you're on a regular website</li>
+          <li>Check if the extension has permissions</li>
+        </ul>
+      </div>
+      <button class="btn btn-primary" id="retryBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="23 4 23 10 17 10"></polyline>
+          <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+        </svg>
+        <span>Try Again</span>
+      </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <span class="footer-version">Privacy Shield v1.0.0</span>
+      <div class="footer-links">
+        <a href="#" id="helpLink" aria-label="Get help">Help</a>
+        <span class="footer-divider">•</span>
+        <a href="#" id="feedbackLink" aria-label="Send feedback">Feedback</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
