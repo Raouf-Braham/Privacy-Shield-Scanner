@@ -137,11 +137,12 @@ Or download and extract the ZIP file from GitHub.
 - Click the puzzle icon 🧩 in the toolbar
 - Click the pin 📌 next to "Privacy Shield Scanner"
 
-### Method 2: Chrome Web Store (Coming Soon)
+### Method 2: Microsoft Edge Add-ons 
 
 ```
-🚧 The extension will be available on the Chrome Web Store soon! 
+🎉 The extension is now live on the Microsoft Edge Add-ons store! 
 ```
+[Privacy Shield Scanner – Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/privacy-shield-scanner/gjcgfbfcendnafkmbjokkkllidbbajdb)
 
 ---
 
