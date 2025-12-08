@@ -142,7 +142,7 @@ Or download and extract the ZIP file from GitHub.
 ```
 🎉 The extension is now live on the Microsoft Edge Add-ons store! 
 ```
-[Privacy Shield Scanner – Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/privacy-shield-scanner/gjcgfbfcendnafkmbjokkkllidbbajdb)
+**GET IT HERE :** [Privacy Shield Scanner – Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/privacy-shield-scanner/gjcgfbfcendnafkmbjokkkllidbbajdb)
 
 ---
 
